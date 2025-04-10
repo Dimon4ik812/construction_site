@@ -1,0 +1,66 @@
+.floating-whatsapp-container {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    display: flex;
+    flex-direction: column; /* Размещение элементов по вертикали */
+    align-items: center; /* Центрирование элементов по горизонтали */
+    z-index: 1000;
+}
+
+.floating-whatsapp-button {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25D366;
+    color: white;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.floating-whatsapp-button:hover {
+    transform: scale(1.1);
+}
+
+.floating-whatsapp-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Убедитесь, что иконка масштабируется правильно */
+}
+
+@media (max-width: 600px) {
+    .floating-whatsapp-button {
+        width: 40px;
+        height: 40px;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+/* Основное изображение в качестве фона */
+.swiper-container_1 {
+    background-image: url('/media/img/bg/demo.jpg'); /* Путь к основному изображению */
+    background-size: cover; /* Масштабирование изображения */
+    background-position: center; /* Центрирование изображения */
+    position: relative;
+}
+
+/* Стили для слайдера */
+.swiper-slide {
+    height: 500px; /* Высота слайда */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для текста */
+}
+

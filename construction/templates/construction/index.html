@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+{% load my_tags %}
+{% load static %}
+
+<html>
+	<head>
+		<title>Home</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<!-- Bootstrap CSS -->
+  		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+		<!-- Bootstrap JS и Popper.js -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+		<!-- Fonts-->
+		<link rel="stylesheet" type="text/css" href="/static/fonts/fontawesome/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="/static/fonts/pe-icon/pe-icon.css">
+		<!-- Vendors-->
+		<link rel="stylesheet" type="text/css" href="/static/vendors/bootstrap/grid.css">
+		<link rel="stylesheet" type="text/css" href="/static/vendors/magnific-popup/magnific-popup.min.css">
+		<link rel="stylesheet" type="text/css" href="/static/vendors/swiper/swiper.css">
+		<!-- App & fonts-->
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Oswald:400,600|Playfair+Display:400i">
+		<link rel="stylesheet" type="text/css" href="/static/css/main.css">
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}?v=1">
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+
+	</head>
+	<body>
+	<div class="floating-whatsapp-container">
+		<a href="https://wa.me/79999911178" target="_blank" class="floating-whatsapp-button">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30" height="30">
+		</a>
+		<span class="floating-whatsapp-text">Напишите нам</span>
+	</div>
+	<!-- preload -->
+				<div class="preload" id="preload">
+					<div class="cssload-spin-box"></div>
+				</div><!-- End / preload -->
+				
+		<div class="page-wrap">
+			
+			<!-- header -->
+			<header class="header header-fixheight header--fixed">
+				<div class="container">
+					<div class="header__inner">
+						<div class="header-logo"><a href="home.html"><img src="/media/img/логотип СК РИТМ (2) (6).png" alt=""/></a></div>
+						
+						<!-- raising-nav -->
+						<nav class="raising-nav">
+							
+							<!-- raising-menu -->
+							<ul class="raising-menu">
+								<li class="current"><a href="#id1">Главная</a>
+								</li>
+								<li><a href="#id2">О нас</a>
+								</li>
+								<li><a href="#id3">Наши услуги</a>
+								</li>
+								<li><a href="#id4">Наши работы</a>
+								</li>
+								<li><a href="#id6">Наши преимущества</a>
+								</li>
+								<li><a href="#id7">Контакты</a>
+								</li>
+							</ul><!-- raising-menu -->
+							
+							<div class="navbar-toggle"><i class="fa fa-bars"></i></div>
+						</nav><!-- End / raising-nav -->
+
+						<div class="searchbar">
+							<div class="searchbar__group"><span class="searchbar__addon"><i class="fa fa-search"></i></span>
+								<input class="searchbar__input" type="text" name="search" value="" placeholder="Search"/><span class="searchbar__close"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header><!-- End / header -->
+			
+			<!-- Content-->
+			<div class="md-content">
+				
+				<!-- hero -->
+				<hero class="hero" id="id1">
+					
+					<!-- swiper swiper-container -->
+					<div class="swiper swiper-container_1">
+						<div class="swiper-wrapper">
+							<div class="hero__wrapper" style="background-image: url('/media/img/slider/1.jpg');">
+								<div class="hero__inner">
+									<div class="container">
+										<h1 class="hero__title">Аренда спецтехники</h1>
+										<p class="hero__desc">Аренда специальной техники для любых видов работ, любой сложности</p>
+
+									</div>
+								</div>
+							</div>
+							<div class="hero__wrapper" style="background-image: url('assets/img/slider/2.jpg');">
+								<div class="hero__inner">
+									<div class="container">
+										<h1 class="hero__title">Демонтаж зданий</h1>
+										<p class="hero__desc">это комплексная услуга по безопасному и эффективному сносу строений любой сложности, включая подготовку объекта, разборку конструкций и вывоз строительного мусора. Наши специалисты используют современное оборудование и технологии, гарантируя соблюдение всех норм безопасности и минимальное воздействие на окружающую среду.</p>
+
+										
+									</div>
+								</div>
+							</div>
+							<div class="hero__wrapper" style="background-image: url('assets/img/slider/3.jpg');">
+								<div class="hero__inner">
+									<div class="container">
+										<h1 class="hero__title">Выездной Ремонт и диагностика спецтехники</h1>
+										<p class="hero__desc">направленная на оперативное устранение неисправностей и техническое обслуживание оборудования непосредственно на месте эксплуатации. Наши специалисты оснащены современным диагностическим оборудованием и инструментами, что позволяет быстро выявить проблему и восстановить работоспособность техники, минимизируя простои.</p>
+
+										
+									</div>
+								</div>
+							</div>
+							<div class="hero__wrapper" style="background-image: url('assets/img/slider/4.jpg');">
+								<div class="hero__inner">
+									<div class="container">
+										<h1 class="hero__title">Комплексное благоустройство территории</h1>
+										<p class="hero__desc">это услуга, направленная на создание комфортной и эстетичной среды, включающая ландшафтный дизайн, озеленение, устройство дорожек, освещения и малых архитектурных форм. Мы воплощаем ваши идеи в жизнь, учитывая особенности участка и пожелания заказчика, чтобы превратить пространство в функциональную и красивую зону для отдыха или работы.</p>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-pagination-custom"></div>
+						<div class="swiper-button-custom">
+							<div class="swiper-button-prev-custom"><i class="fa fa-angle-left"></i></div>
+							<div class="swiper-button-next-custom"><i class="fa fa-angle-right"></i></div>
+						</div>
+					</div><!-- End / swiper swiper-container -->
+					
+				</hero><!-- End / hero -->
+				
+				
+				<!-- cta-02 -->
+				<div class="cta-02">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-9 ">
+								<h3 class="cta-02__title">Хотите проконсультироваться по стоимости интересующих Вас услуг?</h3>
+							</div>
+							<div class="col-lg-3  md-text-right">
+								
+								<!-- btn -->
+								<a class="btn btn-outline" href="#id7">Оставить заявку
+								</a><!-- End / btn -->
+								
+							</div>
+						</div>
+					</div>
+				</div><!-- End / cta-02 -->
+				
+				
+				<!-- Section -->
+				<section class="md-section" id="id2" style="background-color:#fff;padding:60px 0;">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-6 ">
+								<div class="mb-30">
+									
+									<!-- sec-title -->
+									<div class="sec-title sec-title__lg-title">
+										<h2 class="sec-title__title">О компании  <span> ООО "СК РИТМ+"  Санкт Петербург</span></h2><span class="sec-title__divider"></span>
+									</div><!-- End / sec-title -->
+									
+									<p>"СК РИТМ" - динамично развивающаяся строительно-монтажная компания, основанная в 2010 году в Санкт-Петербурге. Название компании символизирует слаженность и четкость работы всех процессов в строительстве, как в музыкальном ритме.
+
+За годы работы компания зарекомендовала себя как надежный партнер в сфере промышленного и гражданского строительства. Специализируется на монтаже металлоконструкций, возведении коммерческой недвижимости и реконструкции исторических зданий с сохранением архитектурного облика культурной столицы.
+
+Штат компании составляют высококвалифицированные специалисты - от инженеров до рабочих бригад, для которых качество и соблюдение сроков являются приоритетом.</p><br>
+									<p>"СК РИТМ" гордится тем, что более 70% клиентов обращаются повторно или по рекомендации. Компания постоянно расширяет спектр предоставляемых услуг и внедряет современные технологии в строительстве.
+
+Основной принцип работы: "Строительство в ритме вашего успеха!"</p><br><br><a class="btn btn-primary btn-outline" href="#">Главная</a>
+								</div>
+							</div>
+							<div class="col-lg-6 ">
+								
+								<!-- about -->
+								<div class="about"><img src="/media/img/about/21.jpg" alt=""/>
+									
+									<!-- quote-02 -->
+									<blockquote class="quote-02 about-quote">
+										<p class="quote-02__text">Миссия компании СК РИТМ+ — предоставлять высококачественные услуги в сфере демонтажа, ремонта и благоустройства, обеспечивая безопасность, надежность и максимальное удовлетворение потребностей клиентов. Мы стремимся создавать комфортные и функциональные пространства, внедряя инновационные решения и поддерживая доверие наших партнеров.</p>
+
+										<!-- authorbox -->
+										<div class="authorbox">
+											<div class="authorbox__avartar" style="background-image: url(https://unsplash.it/800);"><img src="https://unsplash.it/800" alt=""/></div>
+											<div class="authorbox__info">
+												<h5 class="authorbox__name">Maria Gutierrez</h5>
+												<p class="authorbox__work">Designer</p>
+											</div>
+										</div><!-- End / authorbox -->
+
+									</blockquote><!-- End / quote-02 -->
+									
+								</div><!-- End / about -->
+								
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- End / Section -->
+				
+				
+				<!-- Section -->
+				<section class="md-section" id="id3">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-8 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-2 ">
+								
+								<!-- sec-title -->
+								<div class="sec-title sec-title__lg-title md-text-center">
+									<h2 class="sec-title__title">Наши услуги</h2><span class="sec-title__divider"></span>
+								</div><!-- End / sec-title -->
+								
+							</div>
+						</div>
+						<div class="row row-eq-height">
+							{% for service in services %}
+							<div class="col-sm-6 col-md-6 col-lg-4 ">
+
+								<!-- services -->
+
+								<div class="services">
+									<div class="services__img"><img src="{{ service.image | media_filter }}" alt=""/></div>
+									<h2 class="services__title"><a href="#">{{ service.name }}</a></h2>
+									<div class="services__desc">{{ service.description }}</div>
+
+									<!-- btn -->
+									<a class="btn btn-primary btn-custom"
+									   href="#"
+									   data-bs-toggle="modal"
+									   data-bs-target="#staticBackdrop"
+									   data-service-name="{{ service.name }}"
+									   data-service-price="{{ service.price }}">
+									  заказать
+									</a>
+
+<!--									<a class="btn btn btn-primary btn-custom" href="service-single.html">заказать-->
+<!--									</a>&lt;!&ndash; End / btn &ndash;&gt;-->
+									<h2 class="services__title"><a href="#">{{ service.price }} руб/час</a></h2>
+
+								</div><!-- End / services -->
+						</div>
+						{% endfor %}
+					</div>
+				</section>
+				<!-- End / Section -->
+				
+				
+				<!-- Section -->
+				<section class="md-section" id="id4" style="background-color:#fff;">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-8 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-2 ">
+								
+								<!-- sec-title -->
+								<div class="sec-title sec-title__lg-title md-text-center">
+									<h2 class="sec-title__title">Наши работы</h2><span class="sec-title__divider"></span>
+								</div><!-- End / sec-title -->
+								
+							</div>
+						</div>
+						
+						<!-- gallery-wrap -->
+						<div class="gallery-wrap gallery-album">
+							<div class="grid-css grid-css--grid" data-col-lg="4" data-col-md="2" data-col-sm="2" data-col-xs="1" data-gap="30">
+								<div class="grid__inner">
+									<div class="grid-sizer"></div>
+									
+									<!-- grid-item -->
+									<div class="grid-item large">
+										<div class="grid-item__inner">
+											<div class="grid-item__content-wrapper">
+												
+												<!-- gallery -->
+												<div class="gallery gallery--grid">
+													<div class="gallery__image bg-image" style="background-image: url(/media/img/gallery/1.jpg);"><img src="/media/img/gallery/1.jpg" alt="How to Create and"/><a class="gallery__overlay mfp-image" href="/media/img/gallery/1.jpg" data-effect="mfp-zoom-in" title="Design a Perfect">
+															<div class="md-tb">
+																<div class="md-tb__cell md-text-center"><i class="fa fa-search"></i></div>
+															</div></a>
+													</div>
+												</div><!-- End / gallery -->
+												
+											</div>
+										</div>
+									</div><!-- End / grid-item -->
+									
+									
+									<!-- grid-item -->
+									<div class="grid-item wide">
+										<div class="grid-item__inner">
+											<div class="grid-item__content-wrapper">
+												
+												<!-- gallery -->
+												<div class="gallery gallery--grid">
+													<div class="gallery__image bg-image" style="background-image: url(/media/img/gallery/2.jpg);"><img src="/media/img/gallery/2.jpg" alt="How to Master"/><a class="gallery__overlay mfp-image" href="/media/img/gallery/2.jpg" data-effect="mfp-zoom-in" title="Using Memes in Your">
+															<div class="md-tb">
+																<div class="md-tb__cell md-text-center"><i class="fa fa-search"></i></div>
+															</div></a>
+													</div>
+												</div><!-- End / gallery -->
+												
+											</div>
+										</div>
+									</div><!-- End / grid-item -->
+									
+									
+									<!-- grid-item -->
+									<div class="grid-item">
+										<div class="grid-item__inner">
+											<div class="grid-item__content-wrapper">
+												
+												<!-- gallery -->
+												<div class="gallery gallery--grid">
+													<div class="gallery__image bg-image" style="background-image: url(/media/img/gallery/3.jpg);"><img src="/media/img/gallery/3.jpg" alt="7 UI Choices That"/><a class="gallery__overlay mfp-image" href="/media/img/gallery/3.jpg" data-effect="mfp-zoom-in" title="Design a Perfect">
+															<div class="md-tb">
+																<div class="md-tb__cell md-text-center"><i class="fa fa-search"></i></div>
+															</div></a>
+													</div>
+												</div><!-- End / gallery -->
+												
+											</div>
+										</div>
+									</div><!-- End / grid-item -->
+									
+									
+									<!-- grid-item -->
+									<div class="grid-item">
+										<div class="grid-item__inner">
+											<div class="grid-item__content-wrapper">
+												
+												<!-- gallery -->
+												<div class="gallery gallery--grid">
+													<div class="gallery__image bg-image" style="background-image: url(/media/img/gallery/4.jpg);"><img src="/media/img/gallery/4.jpg" alt="Using Memes in Your"/><a class="gallery__overlay mfp-image" href="/media/img/gallery/4.jpg" data-effect="mfp-zoom-in" title="Is UX Really That">
+															<div class="md-tb">
+																<div class="md-tb__cell md-text-center"><i class="fa fa-search"></i></div>
+															</div></a>
+													</div>
+												</div><!-- End / gallery -->
+												
+											</div>
+										</div>
+									</div><!-- End / grid-item -->
+									
+									
+									<!-- grid-item -->
+									<div class="grid-item">
+										<div class="grid-item__inner">
+											<div class="grid-item__content-wrapper">
+												
+												<!-- gallery -->
+												<div class="gallery gallery--grid">
+													<div class="gallery__image bg-image" style="background-image: url(/media/img/gallery/5.jpg);"><img src="/media/img/gallery/5.jpg" alt="How To Build A"/><a class="gallery__overlay mfp-image" href="/media/img/gallery/5.jpg" data-effect="mfp-zoom-in" title="Free Sketch Plugins">
+															<div class="md-tb">
+																<div class="md-tb__cell md-text-center"><i class="fa fa-search"></i></div>
+															</div></a>
+													</div>
+												</div><!-- End / gallery -->
+												
+											</div>
+										</div>
+									</div><!-- End / grid-item -->
+									
+									
+									<!-- grid-item -->
+									<div class="grid-item">
+										<div class="grid-item__inner">
+											<div class="grid-item__content-wrapper">
+												
+												<!-- gallery -->
+												<div class="gallery gallery--grid">
+													<div class="gallery__image bg-image" style="background-image: url(/media/img/gallery/6.jpg);"><img src="/media/img/gallery/6.jpg" alt="Using Memes in Your"/><a class="gallery__overlay mfp-image" href="/media/img/gallery/6.jpg" data-effect="mfp-zoom-in" title="How to Create and">
+															<div class="md-tb">
+																<div class="md-tb__cell md-text-center"><i class="fa fa-search"></i></div>
+															</div></a>
+													</div>
+												</div><!-- End / gallery -->
+												
+											</div>
+										</div>
+									</div><!-- End / grid-item -->
+									
+									
+									<!-- grid-item -->
+									<div class="grid-item large">
+										<div class="grid-item__inner">
+											<div class="grid-item__content-wrapper">
+												
+												<!-- gallery -->
+												<div class="gallery gallery--grid">
+													<div class="gallery__image bg-image" style="background-image: url(/media/img/gallery/7.jpg);"><img src="/media/img/gallery/7.jpg" alt="Is UX Really That"/><a class="gallery__overlay mfp-image" href="/media/img/gallery/7.jpg" data-effect="mfp-zoom-in" title="How to Master">
+															<div class="md-tb">
+																<div class="md-tb__cell md-text-center"><i class="fa fa-search"></i></div>
+															</div></a>
+													</div>
+												</div><!-- End / gallery -->
+												
+											</div>
+										</div>
+									</div><!-- End / grid-item -->
+									
+									
+									<!-- grid-item -->
+									<div class="grid-item wide">
+										<div class="grid-item__inner">
+											<div class="grid-item__content-wrapper">
+												
+												<!-- gallery -->
+												<div class="gallery gallery--grid">
+													<div class="gallery__image bg-image" style="background-image: url(/media/img/gallery/8.jpg);"><img src="/media/img/gallery/8.jpg" alt="Getting Started with"/><a class="gallery__overlay mfp-image" href="/media/img/gallery/8.jpg" data-effect="mfp-zoom-in" title="The Essential Guide">
+															<div class="md-tb">
+																<div class="md-tb__cell md-text-center"><i class="fa fa-search"></i></div>
+															</div></a>
+													</div>
+												</div><!-- End / gallery -->
+												
+											</div>
+										</div>
+									</div><!-- End / grid-item -->
+									
+								</div>
+							</div>
+						</div><!-- End / gallery-wrap -->
+						
+					</div>
+				</section>
+				<!-- End / Section -->
+				
+				
+
+				
+				<!-- Section -->
+				<section class="md-section md-skin-dark" id="id6" style="background-image:url(&quot;/media/img/bg/demo.jpg&quot;);padding-bottom:50px;">
+					<div class="md-overlay"></div>
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-8 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-2 ">
+								
+								<!-- sec-title -->
+								<div class="sec-title sec-title__lg-title md-text-center">
+									<h2 class="sec-title__title">Наши преимущества</h2><span class="sec-title__divider"></span>
+								</div><!-- End / sec-title -->
+								
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6 col-md-6 col-lg-3 ">
+								
+								<!-- team -->
+								<div class="team">
+									<div class="team__img"><img src="/media/img/team/1.png" alt=""/>
+<!--										<div class="team__overlay">-->
+<!--											<div class="md-tb">-->
+<!--											</div>-->
+<!--										</div>-->
+									</div>
+									<div class="team__body">
+										<div class="team__user">
+											<h4 class="team__name">С нами работать выгодно </h4><span class="team__work">Выезд специалиста-сметчика бесплатно</span>
+										</div>
+<!--										<p class="team__text">Выезд специалиста-сметчика бесплатно </p>-->
+									</div>
+								</div><!-- End / team -->
+								
+							</div>
+							<div class="col-sm-6 col-md-6 col-lg-3 ">
+								
+								<!-- team -->
+								<div class="team">
+									<div class="team__img"><img src="/media/img/team/2.png" alt=""/>
+									</div>
+									<div class="team__body">
+										<div class="team__user">
+											<h4 class="team__name">Быстрый расчёт стоимости </h4><span class="team__work">Итоговый расчет стоймости будет предоставлен в день подачи заявки</span>
+										</div>
+<!--										<p class="team__text">Итоговый расчет стоймости будет предоставлен в день подачи заявки</p>-->
+									</div>
+								</div><!-- End / team -->
+								
+							</div>
+							<div class="col-sm-6 col-md-6 col-lg-3 ">
+								
+								<!-- team -->
+								<div class="team">
+									<div class="team__img"><img src="/media/img/team/3.png" alt=""/>
+
+									</div>
+									<div class="team__body">
+										<div class="team__user">
+											<h4 class="team__name">Собственный парк техники</h4>
+
+											<span class="team__work">Мы готовы предоставить специальную технику для любых видов работ</span>
+										</div>
+<!--										<p class="team__text">Мы готовы предоставить специальную технику для любых видов работ</p>-->
+									</div>
+								</div><!-- End / team -->
+								
+							</div>
+							<div class="col-sm-6 col-md-6 col-lg-3 ">
+								
+								<!-- team -->
+								<div class="team">
+									<div class="team__img"><img src="/media/img/team/4.png" alt=""/>
+									</div>
+									<div class="team__body">
+										<div class="team__user">
+											<h4 class="team__name">Большой опыт работы</h4><span class="team__work">Опыт работы более 8 лет</span>
+										</div>
+<!--										<p class="team__text">Опыт работы более 8 лет </p>-->
+									</div>
+								</div><!-- End / team -->
+
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- End / Section -->
+				
+				
+				<!-- Section -->
+				<section class="md-section" id="id7" style="background-color:#fff;padding:60px 0 0;">
+					<div class="row">
+						<div class="col-lg-8 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-2 ">
+							
+							<!-- sec-title -->
+							<div class="sec-title sec-title__lg-title md-text-center">
+								<h2 class="sec-title__title">Наши контакты</h2><span class="sec-title__divider"></span>
+							</div><!-- End / sec-title -->
+							
+						</div>
+					</div>
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-9  col-lg-push-3">
+								<div class="main-content">
+									<div class="row"> 
+										<div class="col-lg-6 ">
+												<form class="contact-form" action="/send-order-info/" method="POST">
+  												{% csrf_token %} <!-- CSRF-токен для защиты -->
+												
+												<!-- form-item -->
+												<!-- Имя -->
+												  <div class="form-item">
+													<input class="form-control" type="text" name="customer_name" placeholder="Ваше имя" required />
+												  </div>
+
+												  <!-- Email -->
+												  <div class="form-item">
+													<input class="form-control" type="email" name="customer_email" placeholder="Email" required />
+												  </div>
+
+												  <!-- Телефон -->
+												  <div class="form-item">
+													<input class="form-control" type="tel" name="customer_phone" placeholder="Ваш номер телефона" required />
+												  </div>
+
+												  <!-- Услуга -->
+												  <div class="form-item">
+													<input class="form-control" type="text" name="service_name" placeholder="Услуга" required />
+												  </div>
+
+												  <!-- Сообщение -->
+												  <div class="form-item">
+													<textarea name="message" placeholder="Сообщение" style="height: 150px;"></textarea>
+												  </div>
+
+												  <!-- Кнопка отправки -->
+												  <button class="btn btn-primary btn-round mb-30" type="submit">Оставить заявку</button>
+												</form>
+
+										</div>
+										<div class="col-lg-6 ">
+											<div class="contact-gmap"><iframe src="https://www.google.com/maps/embed/v1/place?q=1-я+Жерновская+ул.,+29-а&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-3  col-lg-pull-9">
+								<div class="sidebar">
+									
+									<!-- widget -->
+									<section class="widget">
+										
+										<!-- sec-title -->
+										<div class="sec-title">
+											<h2 class="sec-title__title">г. Санкт-Петербург </h2><span class="sec-title__divider"></span>
+										</div><!-- End / sec-title -->
+										
+										<p class="mb-30">Компания СК РИТМ+ всегда рада помочь вам и готова взяться за любые задачи, связанные с демонтажными работами, ремонтом спецтехники или благоустройством территорий. Обращайтесь в любое время — наши специалисты оперативно ответят на ваши вопросы и предложат оптимальное решение для вашего проекта!</p>
+										
+										<!--  -->
+										<div>
+											<div class="widget-contact__item"><span class="widget-contact__title">Телефон:</span>
+												<p class="widget-contact__text">+7 999 991 11 78</p>
+											</div>
+											<div class="widget-contact__item"><span class="widget-contact__title">email:</span>
+												<p class="widget-contact__text"><a href="#">info@awe7.com</a></p>
+											</div>
+											<div class="widget-contact__item"><span class="widget-contact__title">Часы работы</span>
+												<p class="widget-contact__text">Понедельник - Воскресенье : 9:00 - 22:00</p>
+											</div>
+										</div><!-- End /   -->
+										
+									</section><!-- End / widget -->
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- End / Section -->
+				
+			</div>
+			<!-- End / Content-->
+			
+			<!-- footer-01 -->
+			<footer class="footer-01 md-skin-dark">
+				<div class="footer-01__widget">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6 col-lg-3 ">
+								
+								<!-- widget -->
+								<section class="widget">
+									
+									<!-- sec-title -->
+									<div class="sec-title">
+										<h2 class="sec-title__title">«СК РИТМ+»</h2><span class="sec-title__divider"></span>
+									</div><!-- End / sec-title -->
+									
+									<p>  Ваш надежный партнер в создании пространств будущего!</p>
+								</section><!-- End / widget -->
+								
+							</div>
+							<div class="col-md-6 col-lg-3 ">
+								
+								<!-- widget -->
+								<section class="widget">
+									
+									<!-- sec-title -->
+									<div class="sec-title">
+										<h2 class="sec-title__title">навигация</h2><span class="sec-title__divider"></span>
+									</div><!-- End / sec-title -->
+									
+									
+									<!-- widget-tag -->
+									<div class="widget-tag"><a href="#id1">Главная</a><a href="#id2">О Нас</a><a href="#id3">Наши услуги</a><a href="#id4">Наши работы</a><a href="#id6">Наши преимущества</a><a href="#id7">Контакты</a>
+									</div><!-- End /  widget-tag -->
+									
+								</section><!-- End / widget -->
+								
+							</div>
+							<div class="col-md-6 col-lg-3 ">
+								
+								<!-- widget -->
+								<section class="widget">
+
+								  <!-- sec-title -->
+								  <div class="sec-title">
+									<h2 class="sec-title__title">Социальные сети</h2><span class="sec-title__divider"></span>
+								  </div><!-- End / sec-title -->
+
+								  <!-- widget-gallery -->
+								  <div class="widget-gallery">
+									<div class="widget-gallery__item"><a href="https://wa.me/79999911178" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg');"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt=""/></a></div>
+									<div class="widget-gallery__item"><a href="https://t.me/your_telegram_username" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg');"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Telegram_Logo.svg" alt=""/></a></div>
+								  </div><!-- End / widget-gallery -->
+
+								</section><!-- End / widget -->
+								
+							</div>
+							<div class="col-lg-3 ">
+								
+								<!-- widget -->
+								<section class="widget">
+									
+									<!-- sec-title -->
+									<div class="sec-title">
+										<h2 class="sec-title__title">Часы работы</h2><span class="sec-title__divider"></span>
+									</div><!-- End / sec-title -->
+
+									
+									<!--  -->
+									<div>
+										<div class="widget-contact__item"><span class="widget-contact__title">Телефон:</span>
+											<p class="widget-contact__text">+7 999 991 11 78</p>
+										</div>
+										<div class="widget-contact__item"><span class="widget-contact__title">email:</span>
+											<p class="widget-contact__text"><a href="#">info@awe7.com</a></p>
+										</div>
+										<div class="widget-contact__item"><span class="widget-contact__title">Часы работы</span>
+											<p class="widget-contact__text"> Понедельник - Воскресенье: 9:00 - 22:00</p>
+										</div>
+									</div><!-- End /   -->
+									
+								</section><!-- End / widget -->
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- copyright-01 -->
+				<div class="copyright-01 md-text-center">
+					<div class="container">
+						<p class="copyright-01__copy">2025 &copy; Создано студией Дмитрия Крюкова.</p>
+					</div>
+				</div><!-- End / copyright-01 -->
+			</footer><!-- End / footer-01 -->
+		</div>
+
+				<!-- jQuery -->
+		<script type="text/javascript" src="/static/vendors/jquery/jquery.min.js"></script>
+
+		<!-- Bootstrap JS -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+		<!-- Vendors-->
+		<script type="text/javascript" src="/static/vendors/jquery/jquery.min.js"></script>
+		<script type="text/javascript" src="/static/vendors/imagesloaded/imagesloaded.pkgd.js"></script>
+		<script type="text/javascript" src="/static/vendors/isotope-layout/isotope.pkgd.js"></script>
+		<script type="text/javascript" src="/static/vendors/jquery.matchHeight/jquery.matchHeight.min.js"></script>
+		<script type="text/javascript" src="/static/vendors/magnific-popup/jquery.magnific-popup.min.js"></script>
+		<script type="text/javascript" src="/static/vendors/masonry-layout/masonry.pkgd.js"></script>
+		<script type="text/javascript" src="/static/vendors/swiper/swiper.jquery.js"></script>
+		<script type="text/javascript" src="/static/vendors/jquery-one-page/jquery.nav.js"></script>
+		<script type="text/javascript" src="/static/vendors/menu/menu.js"></script>
+		<script type="text/javascript" src="/static/vendors/jquery.waypoints/jquery.waypoints.min.js"></script>
+
+		<!-- App-->
+		<script type="text/javascript" src="/static/js/main.js"></script>
+
+	<!-- Модальное окно -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Оформление заказа</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Форма для заказа -->
+        <form id="orderForm">
+          <div class="mb-3">
+            <label for="serviceName" class="form-label">Услуга:</label>
+            <input type="text" class="form-control" id="serviceName" readonly>
+          </div>
+          <div class="mb-3">
+            <label for="servicePrice" class="form-label">Стоимость:</label>
+            <input type="text" class="form-control" id="servicePrice" readonly>
+          </div>
+          <div class="mb-3">
+            <label for="customerName" class="form-label">Ваше имя:</label>
+            <input type="text" class="form-control" id="customerName" placeholder="Введите ваше имя">
+          </div>
+          <div class="mb-3">
+            <label for="customerPhone" class="form-label">Телефон:</label>
+            <input type="text" class="form-control" id="customerPhone" placeholder="Введите ваш телефон">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-primary" id="submitOrder">Отправить заказ</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+	<script type="text/javascript" src="/static/js/custom-scripts.js"></script>
+
+	</body>
+</html>
