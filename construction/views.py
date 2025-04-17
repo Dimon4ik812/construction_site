@@ -126,7 +126,7 @@ def send_order_to_telegram_2(request):
             if response.status_code == 200 and response.json().get('ok'):
                 # Добавляем сообщение об успехе
                 messages.success(request, 'Заявка успешно отправлена!')
-                return redirect('/home/')
+                return redirect('/')
             else:
                 return HttpResponse('Ошибка при отправке в Telegram', status=500)
 
