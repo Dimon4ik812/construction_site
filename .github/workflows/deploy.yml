@@ -96,7 +96,7 @@ jobs:
           ROOT_PASSWORD: ${{ secrets.ROOT_PASSWORD }}
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa_new
+          chmod 600 ~/.ssh/id_rsa_new
           ssh-keyscan -H 188.225.27.88 >> ~/.ssh/known_hosts
           ssh root@188.225.27.88 "cd /root/construction_site/construction_site && git pull && docker-compose down --remove-orphans && docker-compose up -d --build"
