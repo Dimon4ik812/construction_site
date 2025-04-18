@@ -89,6 +89,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Debug SSH connection
+        run: |
+          ssh -vvv root@188.225.27.88 "echo 'Connected successfully'"
+          echo "Public Key: ${{ secrets.SSH_PUBLIC_KEY }}"
+          echo "Private Key (first 100 characters): ${{ secrets.SSH_PRIVATE_KEY:0:100 }}"
+
       - name: Deploy to server
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
