@@ -89,20 +89,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Add SSH host key
-        run: |
-          mkdir -p ~/.ssh
-          ssh-keyscan -H 188.225.27.88 >> ~/.ssh/known_hosts
-      
-
       - name: Deploy to server
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           SSH_PUBLIC_KEY: ${{ secrets.SSH_PUBLIC_KEY }}
           ROOT_PASSWORD: ${{ secrets.ROOT_PASSWORD }}
         run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa_new
-          chmod 600 ~/.ssh/id_rsa_new
-          ssh-keyscan -H 188.225.27.88 >> ~/.ssh/known_hosts
-          ssh root@188.225.27.88 "cd /root/construction_site/construction_site && git pull && docker-compose down --remove-orphans && docker-compose up -d --build"
+          sshpass -p "${{ secrets.ROOT_PASSWORD }}" ssh -vvv -o StrictHostKeyChecking=no root@188.225.27.88 "cd /root/construction_site/construction_site && git pull && docker-compose down --remove-orphans && docker-compose up -d --build"
