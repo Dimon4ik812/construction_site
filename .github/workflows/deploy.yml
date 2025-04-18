@@ -91,10 +91,12 @@ jobs:
 
       - name: Debug SSH keys and password
         run: |
-            echo "Public Key (first 100 characters): ${{ secrets.SSH_PUBLIC_KEY:0:100 }}"
-            echo "Private Key (first 100 characters): ${{ secrets.SSH_PRIVATE_KEY:0:100 }}"
-            echo "Root Password (masked): ${{ secrets.ROOT_PASSWORD }}
-#      - name: Debug SSH connection
+          echo "Public Key (first 100 characters): ${SSH_PUBLIC_KEY:0:100}"
+          echo "Private Key (first 100 characters): ${SSH_PRIVATE_KEY:0:100}"
+          echo "Root Password (masked): ${{ secrets.ROOT_PASSWORD }}"
+        env:
+          SSH_PUBLIC_KEY: ${{ secrets.SSH_PUBLIC_KEY }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
 #        run: |
 #          ssh -vvv root@188.225.27.88 "echo 'Connected successfully'"
 
