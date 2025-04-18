@@ -95,4 +95,8 @@ jobs:
           SSH_PUBLIC_KEY: ${{ secrets.SSH_PUBLIC_KEY }}
           ROOT_PASSWORD: ${{ secrets.ROOT_PASSWORD }}
         run: |
-          sshpass -p "${{ secrets.ROOT_PASSWORD }}" ssh -o StrictHostKeyChecking=no root@188.225.27.88 "cd /root/construction_site/construction_site && git pull && docker-compose down --remove-orphans && docker-compose up -d --build"
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H 188.225.27.88 >> ~/.ssh/known_hosts
+          ssh root@188.225.27.88 "cd /root/construction_site/construction_site && git pull && docker-compose down --remove-orphans && docker-compose up -d --build"
