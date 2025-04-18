@@ -1,20 +1,37 @@
 from django import forms
-from django.contrib.auth.forms import AuthenticationForm, PasswordChangeForm, UserChangeForm, UserCreationForm
+from django.contrib.auth.forms import (
+    AuthenticationForm,
+    PasswordChangeForm,
+    UserChangeForm,
+    UserCreationForm,
+)
+
 from construction.forms import StyleFormMixin
 
 from .models import CustomsUser
 
 
 class CustomUserCreationForm(StyleFormMixin, UserCreationForm):
-    phone_number = forms.CharField(max_length=15, required=False, label="Номер телефона")
+    phone_number = forms.CharField(
+        max_length=15, required=False, label="Номер телефона"
+    )
     username = forms.CharField(max_length=50, required=True, label="Имя пользователя")
     first_name = forms.CharField(max_length=30, required=True, label="ФИО")
     password1 = forms.CharField(label="Пароль", widget=forms.PasswordInput)
-    password2 = forms.CharField(label="Подтверждение пароля", widget=forms.PasswordInput)
+    password2 = forms.CharField(
+        label="Подтверждение пароля", widget=forms.PasswordInput
+    )
 
     class Meta:
         model = CustomsUser
-        fields = ("email", "avatar", "first_name", "username", "phone_number", "country")
+        fields = (
+            "email",
+            "avatar",
+            "first_name",
+            "username",
+            "phone_number",
+            "country",
+        )
         exclude = (
             "is_blocked",
             "last_login",
@@ -78,25 +95,36 @@ class CustomLoginForm(StyleFormMixin, AuthenticationForm):
     username = forms.CharField(
         label="Логин",
         max_length=150,
-        widget=forms.TextInput(attrs={"class": "form-control", "placeholder": "Введите логин"}),
+        widget=forms.TextInput(
+            attrs={"class": "form-control", "placeholder": "Введите логин"}
+        ),
     )
     password = forms.CharField(
-        label="Пароль", widget=forms.PasswordInput(attrs={"class": "form-control", "placeholder": "Введите пароль"})
+        label="Пароль",
+        widget=forms.PasswordInput(
+            attrs={"class": "form-control", "placeholder": "Введите пароль"}
+        ),
     )
 
 
 class CustomChangeForm(StyleFormMixin, PasswordChangeForm):
     old_password = forms.CharField(
         label="Старый пароль",
-        widget=forms.PasswordInput(attrs={"class": "form-control", "placeholder": "Введите старый пароль"}),
+        widget=forms.PasswordInput(
+            attrs={"class": "form-control", "placeholder": "Введите старый пароль"}
+        ),
     )
     new_password1 = forms.CharField(
         label="Новый пароль",
-        widget=forms.PasswordInput(attrs={"class": "form-control", "placeholder": "Введите новый пароль"}),
+        widget=forms.PasswordInput(
+            attrs={"class": "form-control", "placeholder": "Введите новый пароль"}
+        ),
     )
     new_password2 = forms.CharField(
         label="Повторите новый пароль",
-        widget=forms.PasswordInput(attrs={"class": "form-control", "placeholder": "Повторите новый пароль"}),
+        widget=forms.PasswordInput(
+            attrs={"class": "form-control", "placeholder": "Повторите новый пароль"}
+        ),
     )
 
 

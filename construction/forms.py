@@ -1,8 +1,6 @@
 from django.forms import BooleanField
 
 
-
-
 class StyleFormMixin:
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

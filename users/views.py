@@ -1,7 +1,6 @@
 import secrets
 import string
 
-from config.settings import EMAIL_HOST_USER
 from django.contrib import messages
 from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.hashers import make_password
@@ -14,9 +13,13 @@ from django.urls import reverse_lazy
 from django.views import View
 from django.views.generic import DetailView, ListView
 from django.views.generic.edit import CreateView, UpdateView
-
-
-from .forms import CustomChangeForm, CustomLoginForm, CustomUserCreationForm, CustomUserUpdateForm
+from config.settings import EMAIL_HOST_USER
+from .forms import (
+    CustomChangeForm,
+    CustomLoginForm,
+    CustomUserCreationForm,
+    CustomUserUpdateForm,
+)
 from .models import CustomsUser
 
 
@@ -89,7 +92,9 @@ class UserDetailView(DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         user = self.object  # Получаем текущего пользователя
-        context["is_manager"] = user.groups.filter(name="manager").exists()  # Проверка группы
+        context["is_manager"] = user.groups.filter(
+            name="manager"
+        ).exists()  # Проверка группы
 
         return context
 

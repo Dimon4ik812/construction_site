@@ -68,15 +68,6 @@ jobs:
           envkey_POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
           envkey_POSTGRES_HOST: ${{ secrets.POSTGRES_HOST }}
           envkey_POSTGRES_PORT: ${{ secrets.POSTGRES_PORT }}
-          envkey_REDIS_URL: ${{ secrets.REDIS_URL }}
-          envkey_ADMIN_EMAIL: ${{ secrets.ADMIN_EMAIL }}
-          envkey_ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
-          envkey_EMAIL_PORT: ${{ secrets.EMAIL_PORT }}
-          envkey_EMAIL_USE_TLS: ${{ secrets.EMAIL_USE_TLS }}
-          envkey_EMAIL_USE_SSL: ${{ secrets.EMAIL_USE_SSL }}
-          envkey_EMAIL_HOST_USER: ${{ secrets.EMAIL_HOST_USER }}
-          envkey_EMAIL_HOST_PASSWORD: ${{ secrets.EMAIL_HOST_PASSWORD}}
-          envkey_CELERY_BROKER_URL: ${{ secrets.CELERY_BROKER_URL }}
 
 
   build:
@@ -104,4 +95,4 @@ jobs:
           SSH_PUBLIC_KEY: ${{ secrets.SSH_PUBLIC_KEY }}
           ROOT_PASSWORD: ${{ secrets.ROOT_PASSWORD }}
         run: |
-          sshpass -p "${{ secrets.ROOT_PASSWORD }}" ssh -o StrictHostKeyChecking=no root@85.92.111.109 "cd /root/thesis && git pull && docker-compose down --remove-orphans && docker-compose up -d --build"
+          sshpass -p "${{ secrets.ROOT_PASSWORD }}" ssh -o StrictHostKeyChecking=no root@188.225.27.88 "cd /root/construction_site/construction_site && git pull && docker-compose down --remove-orphans && docker-compose up -d --build"

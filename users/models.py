@@ -8,7 +8,9 @@ class CustomsUser(AbstractUser):
     phone_number = models.CharField(max_length=15, blank=True, null=True)
     avatar = models.ImageField(upload_to="photo/avatars/", blank=True, null=True)
 
-    token = models.CharField(max_length=100, verbose_name="Token", blank=True, null=True)
+    token = models.CharField(
+        max_length=100, verbose_name="Token", blank=True, null=True
+    )
     country = models.CharField(
         max_length=50,
         blank=True,

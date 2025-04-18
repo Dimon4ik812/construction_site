@@ -7,7 +7,9 @@ from config.settings import ADMIN_EMAIL, ADMIN_PASSWORD
 class Command(BaseCommand):
     def handle(self, *args, **options):
         User = get_user_model()
-        user = User.objects.create(email=ADMIN_EMAIL, first_name="admin", last_name="admin")
+        user = User.objects.create(
+            email=ADMIN_EMAIL, first_name="admin", last_name="admin"
+        )
 
         user.set_password(ADMIN_PASSWORD)
 
@@ -16,4 +18,8 @@ class Command(BaseCommand):
 
         user.save()
 
-        self.stdout.write(self.style.SUCCESS(f"Successfully created admin user with email {user.email}!"))
+        self.stdout.write(
+            self.style.SUCCESS(
+                f"Successfully created admin user with email {user.email}!"
+            )
+        )
