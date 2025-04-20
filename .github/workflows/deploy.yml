@@ -97,8 +97,8 @@ jobs:
         run: |
           sshpass -p "${{ secrets.ROOT_PASSWORD }}" ssh -vvv -o StrictHostKeyChecking=no root@188.225.27.88 "
           set -x
-          cd /root/construction_site/construction_site &&
-          git pull &&
-          docker-compose down --remove-orphans &&
+          cd /root/construction_site/construction_site || exit 1
+          git pull
+          docker-compose down --remove-orphans
           docker-compose up -d --build
           "
