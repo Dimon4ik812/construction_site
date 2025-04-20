@@ -100,5 +100,5 @@ jobs:
           cd /root/construction_site/construction_site || exit 1
           git pull
           docker-compose down --remove-orphans
-          docker-compose up -d --build
+          docker-compose up -d --build --no-cache
           "
