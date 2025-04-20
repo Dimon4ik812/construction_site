@@ -96,10 +96,10 @@ jobs:
           chmod 600 ~/.ssh/id_rsa_new
           ssh-keyscan github.com >> ~/.ssh/known_hosts
 
-      - name: Start SSH agent
-        run: |
-          eval "$(ssh-agent -s)"
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' | ssh-add -
+#      - name: Start SSH agent
+#        run: |
+#          eval "$(ssh-agent -s)"
+#          echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' | ssh-add -
           
       - name: Test SSH connection to GitHub
         run: |
