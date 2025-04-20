@@ -102,7 +102,7 @@ jobs:
           SSH_PUBLIC_KEY: ${{ secrets.SSH_PUBLIC_KEY }}
           ROOT_PASSWORD: ${{ secrets.ROOT_PASSWORD }}
         run: |
-          ssh -i ~/.ssh/id_rsa_new root@188.225.27.88 "
+          ssh -i ~/.ssh/id_rsa_new -o StrictHostKeyChecking=no root@188.225.27.88 "
           set -x
           cd /root/construction_site/construction_site &&
           git pull &&
