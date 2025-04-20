@@ -99,7 +99,7 @@ jobs:
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa_new
           chmod 600 ~/.ssh/id_rsa_new
           ssh-keyscan github.com >> ~/.ssh/known_hosts
-          ssh -o StrictHostKeyChecking=no root@188.225.27.88 "
+          ssh -i /root/.ssh/id_rsa_new -o StrictHostKeyChecking=no root@188.225.27.88 "
           set -x
           cd /root/construction_site/construction_site &&
           git pull &&
