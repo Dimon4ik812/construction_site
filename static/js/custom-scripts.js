@@ -88,20 +88,22 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-document.querySelectorAll('.toggle-description').forEach(button => {
-    button.addEventListener('click', function () {
-        const target = document.querySelector(this.getAttribute('data-target'));
-        const shortDescription = target.querySelector('.short-description');
-        const fullDescription = target.querySelector('.full-description');
+/* Стили для контейнера */
+.services-container {
+    display: flex;
+    gap: 20px; /* Отступ между карточками */
+    justify-content: space-between; /* Распределение по горизонтали */
+}
 
-        if (shortDescription.style.display !== 'none') {
-            shortDescription.style.display = 'none';
-            fullDescription.style.display = 'inline';
-            this.textContent = 'Показать меньше';
-        } else {
-            shortDescription.style.display = 'inline';
-            fullDescription.style.display = 'none';
-            this.textContent = 'Показать больше';
-        }
-    });
-});
+/* Стили для каждой карточки */
+.service-card {
+    background-color: #f9f9f9; /* Цвет фона */
+    padding: 20px; /* Поля вокруг содержимого */
+    border-radius: 8px; /* Округлённые углы */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень */
+    width: calc(33.33% - 20px); /* Равная ширина для трёх колонок */
+    min-height: 400px; /* Минимальная высота для выравнивания */
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение содержимого */
+    justify-content: space-between; /* Выравнивание по вертикали */
+}
