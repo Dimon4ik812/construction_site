@@ -245,7 +245,7 @@
 									   data-service-price="{{ service.price }}">
 									  заказать
 									</a>
-									<h2 class="services__price"><a href="#"> {{ service.price }} руб/{{ service.unit_of_measurement }}</a></h2>
+									<h2 class="services__price"><a href="#"> {{ service.price }} руб/{{ service.unit_of_measurement.get_status_display }}</a></h2>
 									</div>
 								</div><!-- End / services -->
 						</div>
