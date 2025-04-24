@@ -21,6 +21,10 @@ RUN mkdir -p /app/staticfiles
 
 RUN python manage.py collectstatic --noinput
 
+# Применение миграций
+RUN python manage.py makemigrations
+RUN python manage.py migrate
+
 # Порт для Gunicorn
 EXPOSE 8000
 
