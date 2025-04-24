@@ -230,11 +230,10 @@
 
 								<!-- services -->
 
-								<div class="services-container">
-    								<div class="service-card">
-									<div class="services__img"><img src="{{ service.image | media_filter }}" alt=""/></div>
-									<h2 class="services__title"><a href="#">{{ service.name }}</a></h2>
-									<div class="services__desc">{{ service.description}}</div>
+								<div class="services">
+ 									<div class="services__img"><img src="{{ service.image | media_filter }}" alt=""/></div>
+ 									<h2 class="services__title"><a href="#">{{ service.name }}</a></h2>
+									<div class="services__desc">{{ service.description | truncatechars:100 }}</div>
 
 									<!-- btn -->
 									<div class="button-price-container">
@@ -247,7 +246,6 @@
 									  заказать
 									</a>
 									<h2 class="services__price"><a href="#">{{ service.price }} руб/час</a></h2>
-									</div>
 									</div>
 								</div><!-- End / services -->
 						</div>
