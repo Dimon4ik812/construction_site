@@ -233,7 +233,11 @@
 								<div class="services">
 									<div class="services__img"><img src="{{ service.image | media_filter }}" alt=""/></div>
 									<h2 class="services__title"><a href="#">{{ service.name }}</a></h2>
-									<div class="services__desc">{{ service.description | truncatechars:100 }}</div>
+									<div class="services__desc" id="service-description">
+										<span class="short-description">{{ service.description | truncatechars:80 }}</span>
+										<span class="full-description" style="display: none;">{{ service.description }}</span>
+									</div>
+									<button class="toggle-description" data-target="#service-description">Показать больше</button>
 
 									<!-- btn -->
 									<div class="button-price-container">

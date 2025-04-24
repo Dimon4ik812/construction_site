@@ -86,3 +86,22 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   });
 });
+
+
+document.querySelectorAll('.toggle-description').forEach(button => {
+    button.addEventListener('click', function () {
+        const target = document.querySelector(this.getAttribute('data-target'));
+        const shortDescription = target.querySelector('.short-description');
+        const fullDescription = target.querySelector('.full-description');
+
+        if (shortDescription.style.display !== 'none') {
+            shortDescription.style.display = 'none';
+            fullDescription.style.display = 'inline';
+            this.textContent = 'Показать меньше';
+        } else {
+            shortDescription.style.display = 'inline';
+            fullDescription.style.display = 'none';
+            this.textContent = 'Показать больше';
+        }
+    });
+});
