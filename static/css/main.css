@@ -1681,24 +1681,46 @@ mark, .mark {
     margin-bottom: 40px;
     background-color: #fff;
     padding: 15px;
+    width: 300px; /* Фиксированная ширина карточки */
+    min-height: 450px; /* Минимальная высота для выравнивания */
+    box-sizing: border-box; /* Учитывает padding при расчете ширины/высоты */
+    display: flex;
+    flex-direction: column; /* Размещает элементы вертикально */
+    justify-content: space-between; /* Равномерно распределяет элементы по высоте */
 }
 
+/* Стили для заголовка */
 .services__title {
     font-size: 20px;
     text-transform: uppercase;
     margin: 20px 0 7px;
+    height: 60px; /* Фиксированная высота для заголовков */
+    overflow: hidden; /* Скрывает текст, если он превышает высоту */
+    text-overflow: ellipsis; /* Добавляет многоточие */
+    white-space: nowrap; /* Запрещает перенос текста */
 }
 
 .services__title:hover {
     color: #f0542c;
 }
 
-.services__img {
-    margin-bottom: 15px;
+/* Стили для изображений */
+.services__img img {
+    width: 100%; /* Изображение занимает всю ширину карточки */
+    height: 150px; /* Фиксированная высота изображения */
+    object-fit: cover; /* Обрезает изображение, если оно слишком большое */
+    border-radius: 8px; /* Округлённые углы */
 }
 
+/* Стили для описания */
 .services__desc {
     margin-bottom: 30px;
+    height: 100px; /* Фиксированная высота для описания */
+    overflow: hidden; /* Скрывает текст, если он превышает высоту */
+    text-overflow: ellipsis; /* Добавляет многоточие */
+    display: -webkit-box; /* Для многострочного текста */
+    -webkit-line-clamp: 4; /* Ограничивает количество строк */
+    -webkit-box-orient: vertical; /* Располагает текст вертикально */
 }
 
 
