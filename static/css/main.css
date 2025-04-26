@@ -1682,7 +1682,7 @@ mark, .mark {
     background-color: #fff;
     padding: 15px;
     width: 350px; /* Фиксированная ширина карточки */
-    height: 600px; /* Минимальная высота для выравнивания */
+    height: 650px; /* Минимальная высота для выравнивания */
     box-sizing: border-box; /* Учитывает padding при расчете ширины/высоты */
     display: flex;
     flex-direction: column; /* Размещает элементы вертикально */
