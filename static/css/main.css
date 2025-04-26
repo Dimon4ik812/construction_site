@@ -1714,6 +1714,7 @@ mark, .mark {
 .services__desc {
     margin-bottom: 30px;
     min-height: 100px; /* Минимальная высота для описания */
+    overflow-y: auto; /* Добавляем вертикальную прокрутку */
     display: flex; /* Используем flexbox для выравнивания */
     flex-direction: column; /* Текст в колонку */
     justify-content: flex-start; /* Выравнивание текста сверху */
