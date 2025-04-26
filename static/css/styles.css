@@ -45,6 +45,20 @@
     }
 }
 
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 768px) {
+    .floating-whatsapp-container {
+        flex-direction: column; /* Размещаем элементы вертикально */
+        align-items: flex-end; /* Выравнивание по правому краю */
+        gap: 5px; /* Уменьшаем расстояние между элементами */
+    }
+
+    .floating-whatsapp-text {
+        font-size: 12px; /* Уменьшаем размер текста */
+        margin-top: 5px; /* Добавляем отступ сверху для текста */
+    }
+}
+
 /* Основное изображение в качестве фона */
 .swiper-container_1 {
     background-image: url('/media/img/bg/demo.jpg'); /* Путь к основному изображению */
@@ -115,4 +129,22 @@
     background-color: #d04b27;
 }
 
+/* Скрываем элементы по умолчанию */
+.mobile-only {
+    display: none; /* Скрываем элементы для мобильной версии */
+}
 
+.desktop-only {
+    display: block; /* Показываем элементы для десктопа */
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 768px) {
+    .mobile-only {
+        display: block; /* Показываем элементы для мобильной версии */
+    }
+
+    .desktop-only {
+        display: none; /* Скрываем элементы для десктопа */
+    }
+}

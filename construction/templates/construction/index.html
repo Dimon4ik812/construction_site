@@ -230,29 +230,37 @@
 
 								<!-- services -->
 								<div class="services">
- 									<div class="services__img"><img src="{{ service.image | media_filter }}" alt=""/></div>
- 									<h2 class="services__title"><a href="#">{{ service.name }}</a></h2>
-									<div class="services__desc" id="service-desc-{{ service.id }}" style="display: none;">
+									<div class="services__img"><img src="{{ service.image | media_filter }}" alt=""/></div>
+									<h2 class="services__title"><a href="#">{{ service.name }}</a></h2>
+
+									<!-- Описание -->
+									<div class="services__desc desktop-only">
 										{{ service.description }}
 									</div>
-									<!-- Кнопка "Подробнее" -->
-									<button class="btn-more" onclick="toggleDescription('{{ service.id }}')">
+
+									<!-- Описание для мобильной версии (изначально скрыто) -->
+									<div class="services__desc mobile-only" id="service-desc-{{ service.id }}" style="display: none;">
+										{{ service.description }}
+									</div>
+
+									<!-- Кнопка "Подробнее" для мобильной версии -->
+									<button class="btn-more mobile-only" onclick="toggleDescription('{{ service.id }}')">
 										Подробнее
 									</button>
+
 									<!-- btn -->
 									<div class="button-price-container">
-									<a class="btn btn-primary btn-custom"
-									   href="#"
-									   data-bs-toggle="modal"
-									   data-bs-target="#staticBackdrop"
-									   data-service-name="{{ service.name }}"
-									   data-service-price="{{ service.price }}">
-									  заказать
-									</a>
-									<h2 class="services__price"><a href="#"> {{ service.price }} руб/{{ service.get_unit_of_measurement_display }}</a></h2>
+										<a class="btn btn-primary btn-custom"
+										   href="#"
+										   data-bs-toggle="modal"
+										   data-bs-target="#staticBackdrop"
+										   data-service-name="{{ service.name }}"
+										   data-service-price="{{ service.price }}">
+											Заказать
+										</a>
+										<h2 class="services__price"><a href="#"> {{ service.price }} руб/{{ service.get_unit_of_measurement_display }}</a></h2>
 									</div>
 								</div><!-- End / services -->
-						</div>
 						{% endfor %}
 					</div>
 				</section>

@@ -90,26 +90,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function toggleDescription(serviceId) {
     const description = document.getElementById(`service-desc-${serviceId}`);
-    const card = description.closest(".services");
+    const button = document.querySelector(`#service-desc-${serviceId} + .btn-more`);
 
     if (description.style.display === "none" || description.style.display === "") {
-        // Показываем описание
-        description.style.display = "block";
-
-        // Увеличиваем z-index, чтобы карточка оказалась поверх других
-        card.style.zIndex = "10";
-
-        // Вычисляем новую высоту карточки
-        const cardHeight = card.scrollHeight; // Полная высота карточки с учётом содержимого
-        card.style.height = `${cardHeight}px`; // Устанавливаем новую высоту
+        description.style.display = "block"; // Показываем описание
+        button.textContent = "Скрыть"; // Меняем текст кнопки
     } else {
-        // Скрываем описание
-        description.style.display = "none";
-
-        // Возвращаем исходное значение z-index
-        card.style.zIndex = "1";
-
-        // Возвращаем карточке стандартную высоту
-        card.style.height = "auto";
+        description.style.display = "none"; // Скрываем описание
+        button.textContent = "Подробнее"; // Возвращаем исходный текст
     }
 }
