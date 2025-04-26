@@ -1687,6 +1687,7 @@ mark, .mark {
     display: flex;
     flex-direction: column; /* Размещает элементы вертикально */
     justify-content: space-between;
+    transition: height 0.3s ease;
     overflow: hidden;/* Равномерно распределяет элементы по высоте */
 }
 
