@@ -1715,12 +1715,10 @@ mark, .mark {
 /* Стили для описания */
 .services__desc {
     margin-bottom: 30px;
-    height: 100px; /* Фиксированная высота для описания */
-    overflow: hidden; /* Скрывает текст, если он превышает высоту */
-    text-overflow: ellipsis; /* Добавляет многоточие */
-    display: -webkit-box; /* Для многострочного текста */
-    -webkit-line-clamp: 4; /* Ограничивает количество строк */
-    -webkit-box-orient: vertical; /* Располагает текст вертикально */
+    min-height: 100px; /* Минимальная высота для описания */
+    display: flex; /* Используем flexbox для выравнивания */
+    flex-direction: column; /* Текст в колонку */
+    justify-content: flex-start; /* Выравнивание текста сверху */
 }
 
 
