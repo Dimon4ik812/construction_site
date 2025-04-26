@@ -97,3 +97,20 @@
     flex-direction: column; /* Вертикальное расположение содержимого */
     justify-content: space-between; /* Выравнивание по вертикали */
 }
+
+/* Стили для кнопки "Подробнее" */
+.btn-more {
+    background-color: #f0542c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-more:hover {
+    background-color: #d04b27;
+}

@@ -86,3 +86,16 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   });
 });
+
+
+function toggleDescription(serviceId) {
+    // Находим элемент с описанием по ID
+    const description = document.getElementById(`service-desc-${serviceId}`);
+
+    // Переключаем видимость описания
+    if (description.style.display === "none") {
+        description.style.display = "block"; // Показываем описание
+    } else {
+        description.style.display = "none"; // Скрываем описание
+    }
+}

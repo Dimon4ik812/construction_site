@@ -233,8 +233,13 @@
 								<div class="services">
  									<div class="services__img"><img src="{{ service.image | media_filter }}" alt=""/></div>
  									<h2 class="services__title"><a href="#">{{ service.name }}</a></h2>
-									<div class="services__desc">{{ service.description }}</div>
-
+									<div class="services__desc" id="service-desc-{{ service.id }}" style="display: none;">
+										{{ service.description }}
+									</div>
+									<!-- Кнопка "Подробнее" -->
+									<button class="btn-more" onclick="toggleDescription('{{ service.id }}')">
+										Подробнее
+									</button>
 									<!-- btn -->
 									<div class="button-price-container">
 									<a class="btn btn-primary btn-custom"
