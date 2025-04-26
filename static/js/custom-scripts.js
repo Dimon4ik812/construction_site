@@ -92,13 +92,24 @@ function toggleDescription(serviceId) {
     const description = document.getElementById(`service-desc-${serviceId}`);
     const card = description.closest(".services");
 
-    if (description.style.maxHeight === "0px" || description.style.maxHeight === "") {
+    if (description.style.display === "none" || description.style.display === "") {
         // Показываем описание
-        description.style.maxHeight = `${description.scrollHeight}px`; // Устанавливаем высоту описания
-        card.style.height = `${card.scrollHeight}px`; // Увеличиваем высоту карточки
+        description.style.display = "block";
+
+        // Добавляем класс для отступа
+        card.classList.add("expanded");
+
+        // Вычисляем новую высоту карточки
+        const cardHeight = card.scrollHeight; // Полная высота карточки с учётом содержимого
+        card.style.height = `${cardHeight}px`; // Устанавливаем новую высоту
     } else {
         // Скрываем описание
-        description.style.maxHeight = "0px"; // Сворачиваем описание
-        card.style.height = "auto"; // Возвращаем карточке стандартную высоту
+        description.style.display = "none";
+
+        // Убираем класс для отступа
+        card.classList.remove("expanded");
+
+        // Возвращаем карточке стандартную высоту
+        card.style.height = "auto";
     }
 }
