@@ -6,7 +6,11 @@ class Services(models.Model):
 
     SELECT_UNIT = [
         ("hour", "час"),
-        ("square meter", "кв/м"),
+        ("square meter", "м2"),
+        ("cubic meter", "м3"),
+        ("ton", "т"),
+        ("empty", " "),
+
     ]
 
     name = models.CharField(max_length=100, verbose_name="название услуги")

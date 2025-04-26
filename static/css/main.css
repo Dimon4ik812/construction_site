@@ -1695,8 +1695,6 @@ mark, .mark {
     text-transform: uppercase;
     margin: 20px 0 7px;
     height: 60px; /* Фиксированная высота для заголовков */
-    overflow: hidden; /* Скрывает текст, если он превышает высоту */
-    text-overflow: ellipsis; /* Добавляет многоточие */
     white-space: nowrap; /* Запрещает перенос текста */
 }
 
