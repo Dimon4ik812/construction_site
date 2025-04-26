@@ -1681,8 +1681,8 @@ mark, .mark {
     margin-bottom: 40px;
     background-color: #fff;
     padding: 15px;
-    width: 300px; /* Фиксированная ширина карточки */
-    min-height: 450px; /* Минимальная высота для выравнивания */
+    width: 330px; /* Фиксированная ширина карточки */
+    height: 450px; /* Минимальная высота для выравнивания */
     box-sizing: border-box; /* Учитывает padding при расчете ширины/высоты */
     display: flex;
     flex-direction: column; /* Размещает элементы вертикально */
@@ -1695,7 +1695,6 @@ mark, .mark {
     text-transform: uppercase;
     margin: 20px 0 7px;
     height: 60px; /* Фиксированная высота для заголовков */
-    white-space: nowrap; /* Запрещает перенос текста */
 }
 
 .services__title:hover {
