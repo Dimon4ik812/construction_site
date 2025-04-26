@@ -92,10 +92,9 @@ function toggleDescription(serviceId) {
     const description = document.getElementById(`service-desc-${serviceId}`);
     const card = description.closest(".services");
 
-    if (description.style.visibility === "hidden" || description.style.visibility === "") {
+    if (description.style.display === "none" || description.style.display === "") {
         // Показываем описание
-        description.style.visibility = "visible";
-        description.style.height = "auto"; // Устанавливаем автоматическую высоту
+        description.style.display = "block";
 
         // Увеличиваем z-index, чтобы карточка оказалась поверх других
         card.style.zIndex = "10";
@@ -105,8 +104,7 @@ function toggleDescription(serviceId) {
         card.style.height = `${cardHeight}px`; // Устанавливаем новую высоту
     } else {
         // Скрываем описание
-        description.style.visibility = "hidden";
-        description.style.height = "0"; // Сворачиваем описание
+        description.style.display = "none";
 
         // Возвращаем исходное значение z-index
         card.style.zIndex = "1";
