@@ -96,8 +96,8 @@ function toggleDescription(serviceId) {
         // Показываем описание
         description.style.display = "block";
 
-        // Добавляем класс для отступа
-        card.classList.add("expanded");
+        // Увеличиваем z-index, чтобы карточка оказалась поверх других
+        card.style.zIndex = "10";
 
         // Вычисляем новую высоту карточки
         const cardHeight = card.scrollHeight; // Полная высота карточки с учётом содержимого
@@ -106,8 +106,8 @@ function toggleDescription(serviceId) {
         // Скрываем описание
         description.style.display = "none";
 
-        // Убираем класс для отступа
-        card.classList.remove("expanded");
+        // Возвращаем исходное значение z-index
+        card.style.zIndex = "1";
 
         // Возвращаем карточке стандартную высоту
         card.style.height = "auto";

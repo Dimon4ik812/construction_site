@@ -1685,6 +1685,7 @@ mark, .mark {
     min-height: 450px; /* Минимальная высота для выравнивания */
     box-sizing: border-box; /* Учитывает padding при расчете ширины/высоты */
     display: flex;
+    z-index: 1; /* Начальное значение z-index */
     flex-direction: column; /* Размещает элементы вертикально */
     justify-content: space-between;
     transition: height 0.3s ease;
