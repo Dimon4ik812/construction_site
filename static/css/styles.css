@@ -114,10 +114,3 @@
 .btn-more:hover {
     background-color: #d04b27;
 }
-
-/* Стили для контейнера с карточками */
-.row-eq-height {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Отступ между карточками */
-}
