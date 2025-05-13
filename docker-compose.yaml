@@ -18,6 +18,7 @@ services:
       - ./media:/app/media
     depends_on:
       - db
+    restart: always
 
   nginx:
     build:
@@ -33,6 +34,7 @@ services:
       - ./ssl:/etc/nginx/ssl
     depends_on:
       - app
+    restart: always
 
 volumes:
   pg_data:
