@@ -149,29 +149,38 @@
     }
 }
 
-/* Горизонтальная прокрутка только на мобильных */
+/* === Только для мобильных устройств === */
 @media (max-width: 767px) {
-    .horizontal-scroll-wrapper {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch; /* Плавность на iOS */
-        padding-bottom: 10px;
+
+    /* Скрываем галерею по умолчанию */
+    .mobile-gallery-content {
+        display: none;
+        margin-top: -20px;
+    }
+
+    /* Показываем кнопку */
+    .mobile-gallery-toggle {
         display: block;
+        margin: 20px auto;
     }
 
-    .grid__inner {
-        display: flex !important;
-        flex-wrap: nowrap !important;
-        width: max-content !important;
-        height: auto !important;
+    /* Стиль кнопки */
+    .btn-show-gallery {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
     }
 
-    .grid-item {
-        flex: 0 0 auto !important;
-        width: 90vw !important; /* или задайте конкретную ширину под ваши карточки */
-        margin-right: 15px !important;
+    .btn-show-gallery:hover {
+        background-color: #0056b3;
     }
 
-    .grid-item:last-child {
-        margin-right: 0 !important;
+    /* Когда галерея открыта */
+    .mobile-gallery-content.active {
+        display: block;
     }
 }
