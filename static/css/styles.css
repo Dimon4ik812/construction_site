@@ -148,3 +148,30 @@
         display: none; /* Скрываем элементы для десктопа */
     }
 }
+
+/* Горизонтальная прокрутка только на мобильных */
+@media (max-width: 767px) {
+    .horizontal-scroll-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; /* Плавность на iOS */
+        padding-bottom: 10px;
+        display: block;
+    }
+
+    .grid__inner {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        width: max-content !important;
+        height: auto !important;
+    }
+
+    .grid-item {
+        flex: 0 0 auto !important;
+        width: 90vw !important; /* или задайте конкретную ширину под ваши карточки */
+        margin-right: 15px !important;
+    }
+
+    .grid-item:last-child {
+        margin-right: 0 !important;
+    }
+}
