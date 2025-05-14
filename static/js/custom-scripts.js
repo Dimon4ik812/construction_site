@@ -102,16 +102,15 @@ function toggleDescription(serviceId) {
 }
 
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const toggleBtn = document.querySelector('.btn-show-gallery');
-        const gallery = document.querySelector('.mobile-gallery-content');
 
-        if (toggleBtn && gallery) {
-            toggleBtn.addEventListener('click', function () {
-                gallery.classList.toggle('active');
-                toggleBtn.textContent = gallery.classList.contains('active') ? 'Скрыть работы' : 'Посмотреть наши работы';
-            });
-        }
-    });
-</script>
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleBtn = document.querySelector('.btn-show-gallery');
+    const gallery = document.querySelector('.mobile-gallery-content');
+
+    if (toggleBtn && gallery) {
+        toggleBtn.addEventListener('click', function () {
+            gallery.classList.toggle('active');
+            toggleBtn.textContent = gallery.classList.contains('active') ? 'Скрыть работы' : 'Посмотреть наши работы';
+        });
+    }
+});
